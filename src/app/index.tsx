@@ -1,8 +1,15 @@
+import { router } from 'expo-router';
 import { StyleSheet, View } from 'react-native';
 import { Text, Button } from 'react-native-paper';
 
+// Button Functions
+const SignInButtonPressed = () => {
+  console.log('SignIn Button Pressed')
+  router.push('/auth/SignInScreen')
+}
+
 const SignInButton = () => (
-    <Button icon="account-arrow-right" textColor='#000' mode="contained" onPress={() => console.log('SignIn Button Pressed')}>
+    <Button icon="account-arrow-right" textColor='#000' mode="contained" onPress={() => SignInButtonPressed()}>
       Sign In // Authenticate
     </Button>
   );
@@ -16,9 +23,9 @@ const RegisterButton = () => (
 export default function App() {
   return (
     <View style={styles.container}>
-      <View style={styles.titleContainer}>
+      {/* <View style={styles.titleContainer}>
         <Text variant="headlineLarge" style={styles.title}>Q+ Quality Program</Text>
-      </View>
+      </View> */}
       
       <View style={styles.subtitleContainer}>
         <Text variant="titleLarge" style={styles.title}>Welcome! Let's begin...</Text>
