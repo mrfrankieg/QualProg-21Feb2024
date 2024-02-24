@@ -102,18 +102,21 @@ const styles = StyleSheet.create({
     color: 'grey',
   },
   contentContainer: {
-    marginTop: 50,
+    // marginEnd: 80,
+    // gap: 10
   },
   contentcontainerTitle: {
+    marginTop: 50,
     paddingLeft: 20,
   },
   bodyTitleContainer: {
   },
   bodyContainer: {
-    paddingLeft: 15,
+    paddingHorizontal: 20,
+    marginEnd: 80,
     flexDirection: 'row',
     alignItems: 'center',
-    marginEnd: 120,
+    paddingVertical: 5,
   },
   bodyTitleText: {
     color: 'darkorange',
