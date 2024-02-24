@@ -18,6 +18,7 @@ export default function Main() {
       <Stack>
         <Stack.Screen name="index" options={{ headerShown: false, animation: 'fade' }}/>
         <Stack.Screen name="auth" options={{ headerShown: false, animation: 'fade' }}/>
+        <Stack.Screen name="main" options={{ headerShown: false, animation: 'fade' }}/>
       </Stack>
     </PaperProvider>
   );

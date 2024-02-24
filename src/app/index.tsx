@@ -5,7 +5,7 @@ import { Text, Button } from 'react-native-paper';
 // Button Functions
 const SignInButtonPressed = () => {
   console.log('SignIn Button Pressed')
-  router.push('/auth/SignInScreen')
+  router.push('/main')
 }
 
 const SignInButton = () => (
