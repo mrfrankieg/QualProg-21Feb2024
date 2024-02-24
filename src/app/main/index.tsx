@@ -40,7 +40,10 @@ export default function App() {
       </View>
 
       <View style={styles.contentContainer}>
-        <Text variant="titleLarge" style={styles.bodyTitleText}>Support Engineer Communication</Text>
+        <View style={styles.contentcontainerTitle}>
+          <Text variant="titleLarge" style={styles.bodyTitleText}>Support Engineer Communication</Text>
+        </View>
+
         <View style={styles.bodyContainer}>
           <CheckboxComp />
           <Text variant="bodyLarge" style={styles.bodyText}>Did I provide a customized response?</Text>
@@ -85,7 +88,6 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    padding: 20,
     backgroundColor: '#000',
     justifyContent: 'center',
     alignItems: 'center'
@@ -102,13 +104,16 @@ const styles = StyleSheet.create({
   contentContainer: {
     marginTop: 50,
   },
+  contentcontainerTitle: {
+    paddingLeft: 20,
+  },
   bodyTitleContainer: {
-    alignItems: 'flex-start',
   },
   bodyContainer: {
+    paddingLeft: 15,
     flexDirection: 'row',
-    // flexWrap: 'wrap',
     alignItems: 'center',
+    marginEnd: 120,
   },
   bodyTitleText: {
     color: 'darkorange',
