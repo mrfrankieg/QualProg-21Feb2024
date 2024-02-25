@@ -1,7 +1,38 @@
 import * as React from 'react';
 import { router } from 'expo-router';
 import { StyleSheet, View } from 'react-native';
-import { Text, Checkbox, Button } from 'react-native-paper';
+import { IconButton, Text, Checkbox, Button } from 'react-native-paper';
+
+//Configure Icon Button
+const PageButton = () => (
+  <IconButton
+    icon="numeric-1-circle"
+    iconColor='darkorange'
+    // iconColor={MD3Colors.error50}
+    size={30}
+    // onPress={() => console.log('Pressed')}
+  />
+);
+
+const PageButton2 = () => (
+  <IconButton
+    icon="numeric-2-circle"
+    // iconColor='darkorange'
+    // iconColor={MD3Colors.error50}
+    size={30}
+    onPress={() => console.log('Pressed 2')}
+  />
+);
+
+const PageButton3 = () => (
+  <IconButton
+    icon="numeric-3-circle"
+    // iconColor='darkorange'
+    // iconColor={MD3Colors.error50}
+    size={30}
+    onPress={() => console.log('Pressed 3')}
+  />
+);
 
 // Configure CheckBox
 const CheckboxComp = () => {
@@ -37,6 +68,12 @@ export default function App() {
       <View style={styles.titleContainer}>
         <Text variant="headlineLarge" style={styles.title}>Q+ Quality Program</Text>
         <Text variant="titleMedium" style={styles.subtitle}>Quality Correspondence Review Exercise</Text>
+      </View>
+
+      <View style={styles.pagenumberContainer}>
+        <PageButton />
+        <PageButton2 />
+        <PageButton3 />
       </View>
 
       <View style={styles.contentContainer}>
@@ -89,10 +126,11 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#000',
-    justifyContent: 'center',
+    // justifyContent: 'center',
     alignItems: 'center'
   },
   titleContainer: {
+    marginTop: 50,
     alignItems: 'center'
   },
   title: {
@@ -101,21 +139,25 @@ const styles = StyleSheet.create({
   subtitle: {
     color: 'grey',
   },
+  pagenumberContainer: {
+    flexDirection: 'row',
+  },
   contentContainer: {
-    // marginEnd: 80,
-    // gap: 10
+    flex: 1,
+    justifyContent: 'center',
   },
   contentcontainerTitle: {
-    marginTop: 50,
-    paddingLeft: 20,
+    // marginTop: 30,
+    paddingHorizontal: 30,
   },
   bodyTitleContainer: {
   },
   bodyContainer: {
-    paddingHorizontal: 20,
-    marginEnd: 80,
+    paddingHorizontal: 60,
+    marginEnd: 60,
     flexDirection: 'row',
     alignItems: 'center',
+    // justifyContent: 'center',
     paddingVertical: 5,
   },
   bodyTitleText: {
@@ -126,7 +168,8 @@ const styles = StyleSheet.create({
     color: '#fff'
   },
   nextbuttonContainer: {
-    marginTop: 50,
+    // marginTop: 50,
+    marginBottom: 50,
     width: '70%',
     maxWidth: 400
   }
