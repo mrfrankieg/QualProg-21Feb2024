@@ -7,10 +7,10 @@ import { IconButton, Text, Checkbox, Button } from 'react-native-paper';
 const PageButton = () => (
   <IconButton
     icon="numeric-1-circle"
-    iconColor='darkorange'
+    // iconColor='darkorange'
     // iconColor={MD3Colors.error50}
     size={30}
-    // onPress={() => console.log('Pressed')}
+    onPress={() => router.push('/main')}
   />
 );
 
@@ -28,11 +28,10 @@ const PageButton2 = () => (
 const PageButton3 = () => (
   <IconButton
     icon="numeric-3-circle"
-    // iconColor='darkorange'
+    iconColor='darkorange'
     // iconColor={MD3Colors.error50}
     size={30}
-    // onPress={() => console.log('Pressed 3')}
-    onPress={() => router.push('/main/Screen3')}
+    onPress={() => console.log('Pressed 3')}
   />
 );
 
@@ -53,13 +52,13 @@ const CheckboxComp = () => {
 // Button Functions
 const NextButtonPressed = () => {
   console.log('Next Button Pressed')
-  router.push('/main/Screen2')
+  router.push('/')
 }
 
 // Buttons
 const NextButton = () => (
-  <Button icon="arrow-right-bold" textColor='#000' mode="contained" onPress={() => NextButtonPressed()}>
-    Next
+  <Button icon="checkbox-multiple-marked-circle" textColor='#000' mode="contained" onPress={() => NextButtonPressed()}>
+    Done
   </Button>
 );
 
@@ -80,41 +79,38 @@ export default function App() {
 
       <View style={styles.contentContainer}>
         <View style={styles.contentcontainerTitle}>
-          <Text variant="titleLarge" style={styles.bodyTitleText}>Support Engineer Communication</Text>
+          <Text variant="titleLarge" style={styles.bodyTitleText}>Support Engineer: Knowledge</Text>
         </View>
 
         <View style={styles.bodyContainer}>
           <CheckboxComp />
-          <Text variant="bodyLarge" style={styles.bodyText}>Did I provide a customized response?</Text>
+          <Text variant="bodyLarge" style={styles.bodyText}>Do I fully understand the customer problem?</Text>
         </View>
         <View style={styles.bodyContainer}>
           <CheckboxComp />
-          <Text variant="bodyLarge" style={styles.bodyText}>Did I empathize with the customer?</Text>
+          <Text variant="bodyLarge" style={styles.bodyText}>Did I complete all relevant troubleshooting?</Text>
         </View>
         <View style={styles.bodyContainer}>
           <CheckboxComp />
-          <Text variant="bodyLarge" style={styles.bodyText}>Did I speak confidently?</Text>
+          <Text variant="bodyLarge" style={styles.bodyText}>Did I answer all the customers questions?</Text>
         </View>
         <View style={styles.bodyContainer}>
           <CheckboxComp />
-          <Text variant="bodyLarge" style={styles.bodyText}>Did I leave the door open for the customer to ask further questions?</Text>
+          <Text variant="bodyLarge" style={styles.bodyText}>Did I provide accurate steps?</Text>
         </View>
         <View style={styles.bodyContainer}>
           <CheckboxComp />
-          <Text variant="bodyLarge" style={styles.bodyText}>Did I include a brief greeting or follow-up?</Text>
+          <Text variant="bodyLarge" style={styles.bodyText}>Did I validate all steps and reproduce if necessary?</Text>
         </View>
         <View style={styles.bodyContainer}>
           <CheckboxComp />
-          <Text variant="bodyLarge" style={styles.bodyText}>Did I reiterate the problem?</Text>
+          <Text variant="bodyLarge" style={styles.bodyText}>Did I provide excellent data sources?</Text>
         </View>
         <View style={styles.bodyContainer}>
           <CheckboxComp />
-          <Text variant="bodyLarge" style={styles.bodyText}>Did I use correct punctuation, spelling, and grammar?</Text>
+          <Text variant="bodyLarge" style={styles.bodyText}>Did I provide relevant references?</Text>
         </View>
-        <View style={styles.bodyContainer}>
-          <CheckboxComp />
-          <Text variant="bodyLarge" style={styles.bodyText}>Did I include a new section for each subject content?</Text>
-        </View>
+        
       </View>
       <View style={styles.nextbuttonContainer}>
         <NextButton />

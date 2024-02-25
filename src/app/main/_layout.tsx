@@ -10,6 +10,8 @@ export default function authlayout() {
       }
     }>
       <Stack.Screen name='index' options={{ animation: 'fade'}}/>
+      <Stack.Screen name='Screen2' options={{ animation: 'fade'}}/>
+      <Stack.Screen name='Screen3' options={{ animation: 'fade'}}/>
     </Stack>
   )
 }

@@ -10,7 +10,7 @@ const SignInButtonPressed = () => {
 
 const SignInButton = () => (
     <Button icon="account-arrow-right" textColor='#000' mode="contained" onPress={() => SignInButtonPressed()}>
-      Sign In // Authenticate
+      Authenticate
     </Button>
   );
 
@@ -28,7 +28,7 @@ export default function App() {
       </View> */}
       
       <View style={styles.subtitleContainer}>
-        <Text variant="titleLarge" style={styles.title}>Welcome! Let's begin...</Text>
+        <Text variant="headlineMedium" style={styles.title}>Welcome! Let's begin...</Text>
       </View>
       
       <View style={styles.authButton}>
@@ -40,7 +40,7 @@ export default function App() {
       </View>
 
       <View style={styles.subtextContainer}>
-        <Text variant="titleSmall" style={styles.title}>Powered by AWS NMnS</Text>
+        <Text variant="titleSmall" style={styles.subtextText}>AWS NMnS</Text>
       </View>
     </View>
   );
@@ -69,5 +69,9 @@ const styles = StyleSheet.create({
   },
   subtextContainer: {
     marginTop: 40
+  },
+  subtextText: {
+    color: 'darkorange',
+    opacity: 0.5,
   }
 });

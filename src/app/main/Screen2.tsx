@@ -7,21 +7,20 @@ import { IconButton, Text, Checkbox, Button } from 'react-native-paper';
 const PageButton = () => (
   <IconButton
     icon="numeric-1-circle"
-    iconColor='darkorange'
+    // iconColor='darkorange'
     // iconColor={MD3Colors.error50}
     size={30}
-    // onPress={() => console.log('Pressed')}
+    onPress={() => router.push('/main')}
   />
 );
 
 const PageButton2 = () => (
   <IconButton
     icon="numeric-2-circle"
-    // iconColor='darkorange'
+    iconColor='darkorange'
     // iconColor={MD3Colors.error50}
     size={30}
-    // onPress={() => console.log('Pressed 2')}
-    onPress={() => router.push('/main/Screen2')}
+    onPress={() => console.log('Pressed 2')}
   />
 );
 
@@ -53,7 +52,7 @@ const CheckboxComp = () => {
 // Button Functions
 const NextButtonPressed = () => {
   console.log('Next Button Pressed')
-  router.push('/main/Screen2')
+  router.push('/main/Screen3')
 }
 
 // Buttons
@@ -80,41 +79,22 @@ export default function App() {
 
       <View style={styles.contentContainer}>
         <View style={styles.contentcontainerTitle}>
-          <Text variant="titleLarge" style={styles.bodyTitleText}>Support Engineer Communication</Text>
+          <Text variant="titleLarge" style={styles.bodyTitleText}>Support Engineer: Handling</Text>
         </View>
 
         <View style={styles.bodyContainer}>
           <CheckboxComp />
-          <Text variant="bodyLarge" style={styles.bodyText}>Did I provide a customized response?</Text>
+          <Text variant="bodyLarge" style={styles.bodyText}>Did I set the correct expectations?</Text>
         </View>
         <View style={styles.bodyContainer}>
           <CheckboxComp />
-          <Text variant="bodyLarge" style={styles.bodyText}>Did I empathize with the customer?</Text>
+          <Text variant="bodyLarge" style={styles.bodyText}>Were promises kept?</Text>
         </View>
         <View style={styles.bodyContainer}>
           <CheckboxComp />
-          <Text variant="bodyLarge" style={styles.bodyText}>Did I speak confidently?</Text>
+          <Text variant="bodyLarge" style={styles.bodyText}>Were annotations included and the State of the Case (SOC) updated?</Text>
         </View>
-        <View style={styles.bodyContainer}>
-          <CheckboxComp />
-          <Text variant="bodyLarge" style={styles.bodyText}>Did I leave the door open for the customer to ask further questions?</Text>
-        </View>
-        <View style={styles.bodyContainer}>
-          <CheckboxComp />
-          <Text variant="bodyLarge" style={styles.bodyText}>Did I include a brief greeting or follow-up?</Text>
-        </View>
-        <View style={styles.bodyContainer}>
-          <CheckboxComp />
-          <Text variant="bodyLarge" style={styles.bodyText}>Did I reiterate the problem?</Text>
-        </View>
-        <View style={styles.bodyContainer}>
-          <CheckboxComp />
-          <Text variant="bodyLarge" style={styles.bodyText}>Did I use correct punctuation, spelling, and grammar?</Text>
-        </View>
-        <View style={styles.bodyContainer}>
-          <CheckboxComp />
-          <Text variant="bodyLarge" style={styles.bodyText}>Did I include a new section for each subject content?</Text>
-        </View>
+        
       </View>
       <View style={styles.nextbuttonContainer}>
         <NextButton />
